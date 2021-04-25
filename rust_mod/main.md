@@ -35,7 +35,7 @@ class: invert
 
 # 例
 
-```rs
+```rust
 // src/main.rs
 mod pencil;
 
@@ -44,7 +44,7 @@ fn main() {
 }
 ```
 
-```rs
+```rust
 // src/pencil.rs
 pub fn write() {
     println!("Hello!");
@@ -66,7 +66,7 @@ pub fn write() {
 子の子モジュールが存在しないときによく使います。
 (`pencil` 以下にモジュールを作らない場合)
 
-```rs
+```rust
 // src/main.rs
 mod pencil;
 
@@ -76,7 +76,7 @@ fn main() {
 
 ```
 
-```rs
+```rust
 // src/pencil.rs
 pub fn write() {
     println!("Hello!");
@@ -90,7 +90,7 @@ pub fn write() {
 子の子モジュールが存在するときによく使います。
 Rust 2015 Edition 時点で仕様に存在します。
 
-```rs
+```rust
 // src/main.rs
 mod pencil;
 
@@ -99,7 +99,7 @@ fn main() {
 }
 ```
 
-```rs
+```rust
 // src/pencil/mod.rs
 pub fn write() {
     println!("Hello!"):
@@ -202,7 +202,7 @@ pub const MESSAGE: &str = "Hello!";
 
 使う機能だけコンパイルして時間削減
 
-```rs
+```rust
 #[cfg(feature = "pencil")]
 mod pencil;
 
@@ -212,7 +212,7 @@ mod pen;
 
 OS 専用の機能のコンパイル
 
-```rs
+```rust
 #[cfg(target_os = "windows")]
 mod windows_pen;
 #[cfg(target_os = "windows")]
